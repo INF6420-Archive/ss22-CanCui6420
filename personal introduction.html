@@ -4,40 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Can Cui-Portfolio</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
     <header>
         <nav>
-            <img alt="Welcome to Can Cui's Website">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="personal introduction.html">Personal Introduction</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-            </ul>
+            <p> 
+                Welcome to Can Cui's Website</p>
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="personal introduction.html">Personal Introduction</a>
+                <a href="skills.html">Skills</a>
+                <a href="hobbies.html">Hobbies</a>
+            </div>
         </nav>
     </header>
     <main>
-        <div>
-            <img src="images/portrait.jpg" width="150" height="180">
-        </div>
-        <div>
+        <div class="bigbox">
+        <div class="protrait">
+            <img src="images/portrait.jpg"  >
             <p> Name: Can Cui</p>
             <p> School: Wayne State University</p>
             <p> Professional Direction : Web Design</p>
             <p> Email: hk2100@wayne.edu </p>
         </div>
-        <div>
-           <h3>Personal Skills</h3>
-           <ul>
+        <div class="intro">
+           <h3><em>|</em>Personal Skills</h3>
+           <ul >
                <li>HTML</li>
                <li>CSS</li>
-               <li>JAVA</li>
+               <li>Java Script</li>
            </ul> 
-        </div>
-        <div>
-            <h3>Personal Introduction</h3>
-            <p>I am an outgoing person with a wide range of hobbies and love 
+           <h3><em>|</em>Personal Introduction</h3>
+           <p>I am an outgoing person with a wide range of hobbies and love 
                 to make friends. I actively participate in activities and seriously 
                 study professional knowledge in school. Strong sense of responsibility
                 and team spirit, full of enthusiasm for work. I like to constantly 
@@ -46,8 +45,9 @@
                 is my life creed. I will stick to my faith more in my future life and
                 work and actively deal with every challenge.</p>
         </div>
+        </div>
     </main>
-    <footer>
+    <footer  class="foot">
         <ul>
             <li>&copy;2022 CanCui</li>
             <li>Last Updated:Jun 1,2022 </li>
