@@ -13,7 +13,7 @@ body {
       height: 50px;
       border-top: 1px solid transparent;
 
-      background-color: #ffffff;
+      background-color:rgb(238, 233, 233);
       line-height: 50px;
 
 }
@@ -23,8 +23,10 @@ body {
       text-decoration: none;
       color: #0B5131;
       font-size: 20px;
+      font-weight: 700;
       height: 50px;
       display: inline-block;
+      margin-left: 150px;
 }
 
 nav p {
@@ -38,20 +40,20 @@ nav p {
       color: #ffffff;
 }
 /*index*/
-#screen {
+.screen {
       width: 800px;
       height: 500px;
       overflow: hidden;
       margin: auto;
 }
 
-#screen #rolling {
+.screen .rolling {
       width: 9900px;
       height: 9900px;
       animation: 6s myself infinite;
 }
 
-#screen #rolling img {
+.screen .rolling img {
       float: left
 }
 
@@ -59,14 +61,18 @@ nav p {
 @keyframes myself {
       0% {}
 
-      33% {
-            transform: translateX(0px);
+      30% {
+            transform: translateX(0);
       }
-
-      66% {
+      35% {
             transform: translateX(-800px);
       }
-
+      60% {
+            transform: translateX(-800px);
+      }
+      66% {
+            transform: translateX(-1600px);
+      }
       100% {
             transform: translateX(-1600px);
       }
@@ -108,6 +114,7 @@ table {
       background-color: #0B5131;
       text-align: center;
       margin: 0 30px;
+      border-radius: 10px;
 }
 
 .bold li a {
@@ -196,6 +203,8 @@ em {
       width: 900px;
       margin: auto;
       background-color: white;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px 5px rgb(177, 174, 174);
 }
 
 .skills-box1 ol li {
@@ -224,6 +233,8 @@ em {
       width: 900px;
       margin: auto;
       background-color: white;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px 5px rgb(177, 174, 174);
 }
 
 .skills-box2 ol li {
@@ -252,6 +263,8 @@ em {
       width: 900px;
       margin: auto;
       background-color: white;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px 5px rgb(177, 174, 174);
 
 }
 
@@ -280,6 +293,8 @@ em {
       width: 900px;
       margin: auto;
       background-color: white;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px 5px rgb(177, 174, 174);
 }
 
 .skills-box4 ol li {
@@ -322,6 +337,16 @@ em {
 }
 
 /*hobbies*/
+
+.hidden {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+}
 .photos {
       width: 1300px;
       height: 525px;
@@ -418,4 +443,12 @@ em {
 
 .foot ul li {
       list-style: none;
+      
+}
+.foot ul li a{
+      font-weight: 500;
+      color: #ffffff;
+      text-decoration: none;
+     font-weight: 700;
+     font-size: 18px;
 }
