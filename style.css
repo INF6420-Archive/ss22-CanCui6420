@@ -15,6 +15,7 @@ body {
   border-top: 1px solid transparent;
   background-color: rgb(240, 234, 234);
   line-height: 50px;
+  display: flex;
 }
 
 .nav a {
@@ -24,8 +25,10 @@ body {
   font-size: 20px;
   font-weight: 700;
   height: 50px;
+  width: 100%;
+  text-align: center;
   display: inline-block;
-  margin-left: 150px;
+ 
 }
 
 nav p {
@@ -38,65 +41,109 @@ nav p {
   color: #ffffff;
 }
 /*index*/
-.screen {
-  width: 800px;
-  height: 500px;
-  overflow: hidden;
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  
+  width:50%;
+  height: auto;
+  position: relative;
   margin: auto;
 }
 
-.screen .rolling {
-  width: 9900px;
-  height: 9900px;
-  animation: 6s myself infinite;
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 
-.screen .rolling img {
-  float: left;
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-@keyframes myself {
-  0% {
-  }
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-  30% {
-    transform: translateX(0);
-  }
-  35% {
-    transform: translateX(-800px);
-  }
-  60% {
-    transform: translateX(-800px);
-  }
-  66% {
-    transform: translateX(-800px);
-  }
-  100% {
-    transform: translateX(-1600px);
-  }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 .title {
   color: #0b5131;
-  width: 300px;
+  width: 100%;
   height: 30px;
   margin: 20px;
 }
 
 table {
-  width: 1300px;
+  width: 100%;
   height: 150px;
   margin: auto;
 }
 
 .underline {
   text-decoration: underline;
-
   width: 90px;
 }
 
 .bold {
-  width: 1300px;
+  display: flex;
   height: 70px;
   margin: auto;
 }
@@ -104,7 +151,7 @@ table {
 .bold li {
   list-style: none;
   display: inline-block;
-  width: 180px;
+  width: 100%;
   height: 28px;
   background-color: #0b5131;
   text-align: center;
@@ -125,53 +172,63 @@ table {
 
 /* introduction*/
 .bigbox {
-  height: 525px;
-  width: 1300px;
+  height: 530px;
+  width: 100%;
   margin: 0 auto;
+  display: flex;
 }
 
 .bigbox .protrait {
+  width: 20%;
   height: 500px;
-  width: 260px;
   border: 2px solid #0b5131;
   background-color: #ffffff;
-  float: left;
+ box-sizing: border-box;
+  margin: 10px;
+  
 }
 
 .bigbox .protrait img {
-  width: 240px;
-  height: 330px;
-  margin: 10px;
+  width: 90%;
+  height: auto;
+  margin: 5% ;
+  
 }
 
-.bigbox .protrait p {
+.bigbox .protrait .sketch {
   height: 16px;
   font-size: 16px;
-  margin: 8px 10px;
+  margin: 0 5% ;
 }
 
 .bigbox .intro {
-  float: right;
   height: 500px;
-  width: 1000px;
+  width: 75%;
+  margin: 10px;
   border: 2px solid #0b5131;
-  background-color: #ffffff;
+  background-color: #ffffff;  
+ 
 }
 
 .bigbox .intro h3 {
   margin: 20px;
   color: #0b5131;
+  width: 100%;
+  height: auto;
 }
 
 .bigbox .intro ul {
   margin: 20px 40px;
+  width: 100%;
+  height: auto;
 }
 
 .bigbox .intro p {
   font-size: 18px;
-  height: 150px;
-  width: 900px;
-  padding: 50px;
+ 
+  width: 85%;
+  height: auto;
+  margin: 20px 50px;
 }
 
 em {
@@ -183,13 +240,15 @@ em {
 /*skills */
 .skills-box1 {
   height: 200px;
+  width: 100%;
   border: 1px solid transparent;
   border-top: 4px;
 }
 
 .skills-box1 ol {
   border: 2px solid #0b5131;
-  width: 900px;
+  width: 70%;
+  height: auto;
   margin: auto;
   background-color: white;
   border-radius: 10px;
@@ -203,21 +262,22 @@ em {
 }
 
 .skills-box1 h3 {
-  height: 20px;
-  margin: 20px 20px;
+  margin: 20px;
   font-size: 25px;
   color: #0b5131;
 }
 
 .skills-box2 {
   height: 200px;
+  width: 100%;
   border: 1px solid transparent;
   border-top: 4px;
 }
 
 .skills-box2 ol {
   border: 2px solid #0b5131;
-  width: 900px;
+  width: 70%;
+  height: auto;
   margin: auto;
   background-color: white;
   border-radius: 10px;
@@ -231,21 +291,23 @@ em {
 }
 
 .skills-box2 h3 {
-  height: 20px;
-  margin: 20px 20px;
+  
+  margin: 20px;
   font-size: 25px;
   color: #0b5131;
 }
 
 .skills-box3 {
   height: 200px;
+  width: 100%;
   border: 1px solid transparent;
   border-top: 4px;
 }
 
 .skills-box3 ol {
   border: 2px solid #0b5131;
-  width: 900px;
+  width: 70%;
+  height: auto;
   margin: auto;
   background-color: white;
   border-radius: 10px;
@@ -259,21 +321,23 @@ em {
 }
 
 .skills-box3 h3 {
-  height: 20px;
-  margin: 20px 20px;
+ 
+  margin: 20px;
   font-size: 25px;
   color: #0b5131;
 }
 
 .skills-box4 {
   height: 200px;
+  width: 100%;
   border: 1px solid transparent;
   border-top: 4px;
 }
 
 .skills-box4 ol {
   border: 2px solid #0b5131;
-  width: 900px;
+  width: 70%;
+  height: auto;
   margin: auto;
   background-color: white;
   border-radius: 10px;
@@ -287,32 +351,34 @@ em {
 }
 
 .skills-box4 h3 {
-  height: 20px;
-  margin: 0 20px 20px 20px;
+
+  margin: 20px;
   font-size: 25px;
   color: #0b5131;
 }
 
 .direction {
-  text-align: center;
-  height: 80px;
+ 
+  height: auto;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .direction h3 {
-  height: 25px;
-  width: 250px;
-  border: 1px solid transparent;
-  margin: 10px;
+ 
+
+  margin: 20px;
+  font-size: 25px;
   color: #0b5131;
 }
 
 .direction p {
   color: #0b5131;
-  height: 10px;
-  width: 40px;
-  display: inline;
+  height: auto;
+  width: 100%;
   font-size: 20px;
   font-weight: 700;
+  text-align: center;
 }
 
 /*hobbies*/
@@ -326,33 +392,31 @@ em {
   width: 1px;
 }
 .photos {
-  /* width: 1300px; */
-  /* height: 525px; */
-
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  width: 100%;
+  height: 525px;
 }
 
-.photos img {
+.photos  img {
     width: 100%;
-    height: auto;
+    height: 270px;
+    object-fit: cover;
 }
 
-.photos figure {
-  /* max-width: 100%; */
+.photos .figure1{
+  margin-left: 1em;
 }
 
 .photos .figure1 h3 {
   font-size: 20px;
   margin: 10px;
+  text-align: center;
   color: #0b5131;
 }
 
-.photos figure img {
-  height: 280px;
-  object-fit: cover;
-}
+
 
 .photos .figure1 p {
   text-align: left;
@@ -363,6 +427,7 @@ em {
   font-size: 20px;
   margin: 10px;
   color: #0b5131;
+  text-align: center;
 }
 
 .photos .figure2 p {
@@ -374,6 +439,7 @@ em {
   font-size: 20px;
   margin: 10px;
   color: #0b5131;
+  text-align: center;
 }
 
 .photos .figure3 p {
@@ -386,14 +452,12 @@ em {
   background-color: #0b5131;
   color: #ffffff;
   text-align: center;
-  height: 50px;
+  height: auto;
   width: 100%;
-  float: left;
+  margin-bottom: 2px;
 }
 
-.foot ul li {
-  list-style: none;
-}
+
 .foot ul li a {
   color: #ffffff;
   text-decoration: none;
@@ -414,23 +478,26 @@ form {
 label {
   display: block;
   font-weight: 700;
+  color: #0b5131;
 }
 
 .form-input {
   width: 100%;
-  padding: 10px;
+  padding: 10px 0;
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 18px;
   margin-bottom: 2em;
   margin: 10px auto;
   display: block;
+  box-sizing: border-box;
 }
 .form-input:focus {
   outline: none;
   border: 2px solid #0b5131;
 }
 textarea {
+  
   height: 150px;
   resize: vertical;
 }
@@ -439,7 +506,6 @@ textarea {
   width: 100%;
   border-radius: 4px;
   background-color: #0b5131;
-
   color: #ffffff;
   font-weight: 700;
   font-size: 16px;
