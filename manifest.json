@@ -6,12 +6,14 @@
       {
         "src": "images/lavender.jpg",
         "type": "image/jpg",
-        "sizes": "512x512"
+        "sizes": "512x512",
+        "purpose": "any maskable"
       },
       {
         "src": "images/Joshua.jpg",
         "type": "image/jpg",
-        "sizes": "192x192"
+        "sizes": "192x192",
+        "purpose": "any maskable"
       }
       
     ],

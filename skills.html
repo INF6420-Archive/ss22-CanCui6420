@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#317EFB"/>
     <title>Can Cui-Portfolio</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    
+    <script src="jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -13,13 +14,22 @@
             <p>
                 Welcome to Can Cui's Website</p>
             <div class="nav">
-                <a href="index.html">Home</a>
+                <a href="index.html" class="current">Home</a>
                 <a href="personal introduction.html">Personal Introduction</a>
                 <a href="skills.html">Skills</a>
                 <a href="hobbies.html">Hobbies</a>
                 <a href="contact.html">Contact</a>
             </div>
         </nav>
+        <script>
+            $(function(){
+                $(".nav a ").mouseenter(function(){
+                    $(this).attr('class','current').siblings().attr('class','');
+                });
+             
+            })
+         
+       </script>
     </header>
     <main>
         <h1 class="hidden">Skills</h1>
